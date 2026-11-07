@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nyi Nyi Mobile (Dawei) — Coming Soon</title>
-<meta name="description" content="Nyi Nyi Mobile, Dawei — retail, digital and technology services. Our new website is coming soon.">
+<meta name="description" content="Nyi Nyi Mobile — retail, digital and technology services in Dawei, now expanding to Bangkok, Thailand. Our new website is coming soon.">
 <link rel="canonical" href="https://nyinyimobile.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nyi Nyi Mobile (Dawei) — Coming Soon">
-<meta property="og:description" content="Retail, digital & technology services in Dawei. ညီညီမိုဘိုင်း (ထားဝယ်) — No. 17, Nibban Road. Call 09 254 700 800.">
+<meta property="og:description" content="Retail, digital & technology services in Dawei, now expanding to Bangkok. ညီညီမိုဘိုင်း (ထားဝယ်) — No. 17, Nibban Road. Call 09 254 700 800.">
 <meta property="og:image" content="https://nyinyimobile.com/assets/storefront.jpg">
 <meta property="og:url" content="https://nyinyimobile.com/">
 <meta name="twitter:card" content="summary_large_image">
@@ -179,6 +179,23 @@
 
   /* ---------- Visit ---------- */
   .visit{background:var(--surface);border-top:1px solid var(--line)}
+
+  /* ---------- Expansion ---------- */
+  .expand{background:var(--surface);border-bottom:1px solid var(--line)}
+  .expand__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+  .expand__mm{color:var(--muted);font-size:18px;font-weight:600;margin:-4px 0 14px}
+  .expand__text{color:var(--muted);font-size:16px;max-width:620px;margin-bottom:12px}
+  .route{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 30px 60px -36px rgba(10,26,92,.45)}
+  .loc{display:flex;gap:16px;align-items:center;padding:16px;border-radius:16px;background:var(--tint)}
+  .loc--new{background:var(--check-bg);outline:1.5px dashed rgba(61,220,92,.6);outline-offset:-1.5px}
+  .loc__flag{font-size:30px;line-height:1;flex:none}
+  .loc b{display:block;font-size:17px}
+  .loc .mm{display:block;color:var(--muted);font-size:14px;line-height:1.6}
+  .loc small{display:block;font-size:13px;font-weight:600;color:var(--accent);margin-top:2px}
+  .loc--new small{color:#18a33a}
+  [data-active-theme="dark"] .loc--new small{color:var(--green)}
+  .route__line{height:44px;display:flex;justify-content:flex-start;padding-left:30px}
+  .route__line span{width:2px;height:100%;background:repeating-linear-gradient(to bottom,var(--accent) 0 6px,transparent 6px 12px)}
   .visit__grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
   .photo{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,26,92,.45);aspect-ratio:16/10;background:var(--line)}
   .photo img{width:100%;height:100%;object-fit:cover;display:block}
@@ -198,6 +215,7 @@
   @media (max-width:900px){
     .grid{grid-template-columns:1fr}
     .visit__grid{grid-template-columns:1fr}
+    .expand__grid{grid-template-columns:1fr;gap:32px}
   }
   @media (max-width:600px){
     .wrap{padding:0 16px}
@@ -262,8 +280,8 @@
         <img class="hero__logo" src="assets/logo/logo-wordmark-white.png" alt="ညီညီမိုဘိုင်း — Nyi Nyi Mobile" width="1200" height="453">
         <span class="pill"><span class="dot"></span>Coming soon</span>
         <h1>Retail, <em>digital</em> &amp; technology — all in one place.</h1>
-        <p class="hero__mm mm">ဖုန်း၊ ဒစ်ဂျစ်တယ်နှင့် နည်းပညာ ဝန်ဆောင်မှုများ မကြာမီ အွန်လိုင်းပေါ်တွင်</p>
-        <p class="hero__lead">Our new website is on the way. Shop the latest phones, pay bills and top up, and book repairs and tech support — online and at our store in Dawei.</p>
+        <p class="hero__mm mm">ဖုန်း၊ ဒစ်ဂျစ်တယ်နှင့် နည်းပညာ ဝန်ဆောင်မှုများကို မကြာမီ အွန်လိုင်းမှ ရယူနိုင်ပါတော့မည်။</p>
+        <p class="hero__lead">Our new website is on the way. Shop the latest phones, pay bills and top up, and book repairs and tech support — online, at our store in Dawei, and now from Bangkok.</p>
 
         <div class="notify">
           <a class="btn btn--icon" href="https://m.me/61550840542961" target="_blank" rel="noopener">
@@ -290,8 +308,36 @@
       </div>
     </div>
   </div>
-  <a class="scroll" href="#services">Explore<span></span></a>
+  <a class="scroll" href="#bangkok">Explore<span></span></a>
 </header>
+
+<!-- EXPANSION -->
+<section class="expand" id="bangkok">
+  <div class="wrap expand__grid">
+    <div>
+      <span class="eyebrow">Now expanding</span>
+      <h2>From Dawei to Bangkok</h2>
+      <p class="mm expand__mm">ထားဝယ်မှ ဘန်ကောက်အထိ</p>
+      <p class="expand__text">Nyi Nyi Mobile is based in Dawei and is now expanding to Bangkok, Thailand. Products and services that are limited or hard to find in Dawei or elsewhere in Myanmar can now be arranged through our Bangkok team. Feel free to contact us with any enquiry or requirement.</p>
+      <p class="expand__text mm">ညီညီမိုဘိုင်းသည် ထားဝယ်မြို့တွင် လုပ်ငန်းလည်ပတ်လျက်ရှိပြီး ယခု ထိုင်းနိုင်ငံ ဘန်ကောက်မြို့သို့ တိုးချဲ့လာပါပြီ။ ထားဝယ် သို့မဟုတ် မြန်မာနိုင်ငံအတွင်း ရရှိရန် အကန့်အသတ်ရှိသော ပစ္စည်းများနှင့် ဝန်ဆောင်မှုများကို ဘန်ကောက်မှတစ်ဆင့် ဆောင်ရွက်ပေးနိုင်ပါပြီ။ လိုအပ်ချက်များရှိပါက အချိန်မရွေး လွတ်လပ်စွာ မေးမြန်းဆက်သွယ်နိုင်ပါသည်။</p>
+      <div class="actions">
+        <a class="btn btn--blue" href="https://m.me/61550840542961" target="_blank" rel="noopener">Ask us on Facebook</a>
+        <a class="btn btn--ghost" href="tel:+959254700800">Call 09 254 700 800</a>
+      </div>
+    </div>
+    <div class="route" aria-label="Locations: Dawei, Myanmar and Bangkok, Thailand">
+      <div class="loc">
+        <span class="loc__flag">🇲🇲</span>
+        <div><b>Dawei, Myanmar</b><span class="mm">ထားဝယ်၊ မြန်မာ</span><small>Our store · open now</small></div>
+      </div>
+      <div class="route__line" aria-hidden="true"><span></span></div>
+      <div class="loc loc--new">
+        <span class="loc__flag">🇹🇭</span>
+        <div><b>Bangkok, Thailand</b><span class="mm">ဘန်ကောက်၊ ထိုင်း</span><small>New · enquiries welcome</small></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section id="services">

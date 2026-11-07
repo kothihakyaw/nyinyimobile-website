@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nyi Nyi Mobile (Dawei) — Coming Soon</title>
+<meta name="description" content="Nyi Nyi Mobile, Dawei — retail, digital and technology services. Our new website is coming soon.">
+<link rel="canonical" href="https://kothihakyaw.github.io/nyinyimobile-website/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nyi Nyi Mobile (Dawei) — Coming Soon">
+<meta property="og:description" content="Retail, digital & technology services in Dawei. ညီညီမိုဘိုင်း (ထားဝယ်) — No. 17, Nibban Road. Call 09 254 700 800.">
+<meta property="og:image" content="https://kothihakyaw.github.io/nyinyimobile-website/assets/storefront.jpg">
+<meta property="og:url" content="https://kothihakyaw.github.io/nyinyimobile-website/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/logo/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<meta name="theme-color" content="#0a1a5c">
+<script>try{var t=localStorage.getItem('nnm-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-900:#0a1a5c;
+    --blue-700:#1638b8;
+    --blue-500:#2f5bff;
+    --green:#3ddc5c;
+    --ink:#0f172a;
+    --muted:#5b6478;
+    --bg:#f5f7fc;
+    --card:#ffffff;
+    --line:#e3e8f4;
+    --surface:#ffffff;
+    --tint:#eef2ff;
+    --tint-hover:#e0e7ff;
+    --accent:#1638b8;
+    --check-bg:#e7fbe9;
+    --footer:#0a1a5c;
+    --radius:18px;
+    color-scheme:light;
+  }
+  /* Dark theme: follows the phone/computer setting unless the visitor picks one with the toggle */
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ink:#e7ecf7; --muted:#9ba7c0; --bg:#0a1020; --card:#111a2f; --line:#1f2b47;
+      --surface:#0d1528; --tint:rgba(77,120,255,.16); --tint-hover:rgba(77,120,255,.26);
+      --accent:#8fb0ff; --check-bg:rgba(61,220,92,.16); --footer:#060b18; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#e7ecf7; --muted:#9ba7c0; --bg:#0a1020; --card:#111a2f; --line:#1f2b47;
+    --surface:#0d1528; --tint:rgba(77,120,255,.16); --tint-hover:rgba(77,120,255,.26);
+    --accent:#8fb0ff; --check-bg:rgba(61,220,92,.16); --footer:#060b18; color-scheme:dark;
+  }
+  body,.visit,.card{transition:background-color .25s,border-color .25s,color .25s}
+
+  .nav__right{display:flex;align-items:center;gap:10px}
+  .theme-toggle{
+    width:42px;height:42px;flex:none;border-radius:999px;display:grid;place-items:center;cursor:pointer;color:#fff;
+    border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);backdrop-filter:blur(6px);
+  }
+  .theme-toggle:hover{background:rgba(255,255,255,.18)}
+  .theme-toggle .i-sun{display:none}
+  [data-active-theme="dark"] .theme-toggle .i-sun{display:block}
+  [data-active-theme="dark"] .theme-toggle .i-moon{display:none}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Plus Jakarta Sans","Noto Sans Myanmar",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mm{font-family:"Noto Sans Myanmar","Plus Jakarta Sans",sans-serif;line-height:1.9}
+  a{color:inherit}
+  .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;min-height:100svh;color:#fff;
+    display:flex;flex-direction:column;overflow:hidden;isolation:isolate;
+  }
+  .hero__img{
+    position:absolute;inset:0;z-index:-2;
+    background:url("assets/storefront.webp") center 35%/cover no-repeat;
+    transform:scale(1.04);animation:drift 24s ease-in-out infinite alternate;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(100deg, rgba(8,20,72,.94) 0%, rgba(10,26,92,.82) 38%, rgba(22,56,184,.35) 70%, rgba(22,56,184,.15) 100%),
+      linear-gradient(0deg, rgba(8,20,72,.85) 0%, rgba(8,20,72,0) 40%);
+  }
+  @keyframes drift{to{transform:scale(1.1) translateX(-1.5%)}}
+
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand__mark{
+    width:48px;height:48px;border-radius:13px;display:block;flex:none;
+    box-shadow:0 0 0 1.5px rgba(255,255,255,.35), 0 8px 20px -8px rgba(0,0,0,.5);
+  }
+  .hero__logo{display:block;height:clamp(64px,8vw,92px);width:auto;margin:0 0 22px -6px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+  .foot-logo{height:34px;width:auto;display:block}
+  .brand__name{font-weight:800;font-size:18px;letter-spacing:.2px;line-height:1.1}
+  .brand__name small{display:block;font-weight:500;font-size:13px;opacity:.75}
+  .nav__cta{
+    font-size:14px;font-weight:600;text-decoration:none;padding:10px 18px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);background:rgba(255,255,255,.08);
+  }
+  .nav__cta:hover{background:rgba(255,255,255,.18)}
+  .nav__cta{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+  .brand__city{font-weight:600;opacity:.8}
+  .brand__name small{margin-top:2px}
+  .hero__meta a{display:flex;align-items:center;gap:10px;opacity:.9;text-decoration:none}
+  .hero__meta a:hover{opacity:1;text-decoration:underline}
+  .phones{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .phones a{
+    display:inline-flex;align-items:center;font-weight:600;font-size:15px;text-decoration:none;
+    padding:8px 14px;border-radius:10px;background:var(--tint);color:var(--accent);white-space:nowrap;
+  }
+  .phones a:hover{background:var(--tint-hover)}
+
+  .hero__body{flex:1;display:flex;align-items:center;padding:40px 0 90px}
+  .hero__content{max-width:620px}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;padding:8px 14px;border-radius:999px;
+    background:rgba(61,220,92,.14);border:1px solid rgba(61,220,92,.45);color:#c9ffd4;
+  }
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(61,220,92,.7);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(61,220,92,0)}100%{box-shadow:0 0 0 0 rgba(61,220,92,0)}}
+  h1{font-size:clamp(38px,6vw,68px);line-height:1.04;font-weight:800;letter-spacing:-.02em;margin:22px 0 14px}
+  h1 em{font-style:normal;background:linear-gradient(90deg,#9fd0ff,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero__mm{font-size:clamp(17px,2.2vw,21px);font-weight:600;opacity:.95;margin-bottom:14px}
+  .hero__lead{font-size:clamp(16px,1.8vw,18px);opacity:.85;max-width:540px}
+
+  .notify{margin-top:32px;display:flex;gap:10px;flex-wrap:wrap;max-width:520px}
+  .btn{
+    font:inherit;font-weight:700;font-size:15px;padding:15px 24px;border-radius:14px;border:0;cursor:pointer;
+    background:var(--green);color:#06260e;transition:transform .15s, box-shadow .15s;
+    box-shadow:0 10px 30px -10px rgba(61,220,92,.8);
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .notify__note{font-size:13px;opacity:.7;margin-top:10px;width:100%}
+  .btn--icon{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none}
+  .btn--glass{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:none;backdrop-filter:blur(8px)}
+  .btn--glass:hover{background:rgba(255,255,255,.18)}
+
+  .hero__meta{
+    display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);
+    font-size:14px;
+  }
+  .hero__meta div{display:flex;align-items:center;gap:10px;opacity:.9}
+  .hero__meta svg{flex:none;opacity:.85}
+
+  .scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);opacity:.7;font-size:12px;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll span{width:1px;height:34px;background:linear-gradient(#fff,transparent)}
+
+  /* ---------- Services ---------- */
+  section{padding:96px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  h2{font-size:clamp(28px,4vw,42px);line-height:1.15;letter-spacing:-.015em;margin:10px 0 12px}
+  .sub{color:var(--muted);max-width:620px;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px 28px;
+    position:relative;overflow:hidden;transition:transform .2s, box-shadow .2s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(22,56,184,.35)}
+  .card::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--blue-700),var(--blue-500))}
+  .card:nth-child(2)::after{background:linear-gradient(90deg,var(--blue-500),#22c1ee)}
+  .card:nth-child(3)::after{background:linear-gradient(90deg,#22c1ee,var(--green))}
+  .icon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:var(--tint);color:var(--accent);margin-bottom:20px}
+  .card h3{font-size:21px;margin-bottom:2px}
+  .card .mm{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .card ul{list-style:none;display:grid;gap:9px;font-size:15px}
+  .card li{display:flex;gap:10px;align-items:flex-start}
+  .card li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;
+    background:var(--check-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318a33a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+
+  /* ---------- Visit ---------- */
+  .visit{background:var(--surface);border-top:1px solid var(--line)}
+  .visit__grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .photo{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(10,26,92,.45);aspect-ratio:16/10;background:var(--line)}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .info{display:grid;gap:18px;margin-top:28px}
+  .info__row{display:flex;gap:16px;align-items:flex-start}
+  .info__icon{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--accent);display:grid;place-items:center}
+  .info__row b{display:block;font-size:15px}
+  .info__row p{color:var(--muted);font-size:15px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .btn--blue{background:var(--blue-700);color:#fff;box-shadow:0 10px 30px -12px rgba(22,56,184,.8);text-decoration:none}
+  .btn--ghost{background:transparent;color:var(--accent);border:1.5px solid var(--line);box-shadow:none;text-decoration:none}
+
+  footer{background:var(--footer);color:rgba(255,255,255,.75);font-size:14px;padding:30px 0}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+
+  @media (max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .visit__grid{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 16px}
+    .nav{padding:16px 0}
+    .brand{gap:10px}
+    .brand__mark{width:42px;height:42px;border-radius:11px}
+    .hero__logo{height:58px;margin-bottom:16px}
+    footer .wrap{align-items:center}
+    .brand__name{font-size:16px}
+    .brand__name small{font-size:12px}
+    .nav__cta{padding:0;width:42px;height:42px;justify-content:center}
+    .nav__cta-text{display:none}
+    .hero__img{background-position:62% 30%;animation:none;transform:none}
+    .hero::before{background:linear-gradient(180deg, rgba(8,20,72,.45) 0%, rgba(8,20,72,.55) 22%, rgba(8,20,72,.92) 48%, rgba(8,20,72,.98) 100%)}
+    .hero__body{align-items:flex-end;padding:120px 0 64px}
+    h1{font-size:34px;margin:16px 0 10px}
+    .hero__mm{font-size:16px}
+    .hero__lead{font-size:15px}
+    .notify{margin-top:24px}
+    .hero__meta{flex-direction:column;gap:12px;margin-top:28px;padding-top:20px}
+    .scroll{display:none}
+    section{padding:64px 0}
+    .grid{gap:16px;margin-top:32px}
+    .card{padding:24px 20px 22px}
+    .visit__grid{gap:28px}
+    .photo{border-radius:16px}
+    .phones a{flex:1 1 auto;justify-content:center}
+    .actions .btn{width:100%;text-align:center}
+    .btn{width:100%}
+    footer .wrap{flex-direction:column;gap:6px;text-align:center}
+  }
+  @media (prefers-reduced-motion:reduce){.hero__img,.pill .dot{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero__img" role="img" aria-label="Nyi Nyi Mobile storefront on a corner street in Dawei"></div>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <img class="brand__mark" src="assets/logo/logo-icon.png" alt="" width="44" height="44">
+        <span class="brand__name">Nyi Nyi Mobile <span class="brand__city">(Dawei)</span><small class="mm">ညီညီမိုဘိုင်း (ထားဝယ်)</small></span>
+      </a>
+      <div class="nav__right">
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="nav__cta" href="tel:+959254700800" aria-label="Call 09 254 700 800">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="nav__cta-text">09 254 700 800</span>
+      </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="hero__body">
+    <div class="wrap">
+      <div class="hero__content">
+        <img class="hero__logo" src="assets/logo/logo-wordmark-white.png" alt="ညီညီမိုဘိုင်း — Nyi Nyi Mobile" width="1200" height="453">
+        <span class="pill"><span class="dot"></span>Coming soon</span>
+        <h1>Retail, <em>digital</em> &amp; technology — all in one place.</h1>
+        <p class="hero__mm mm">ဖုန်း၊ ဒစ်ဂျစ်တယ်နှင့် နည်းပညာ ဝန်ဆောင်မှုများ မကြာမီ အွန်လိုင်းပေါ်တွင်</p>
+        <p class="hero__lead">Our new website is on the way. Shop the latest phones, pay bills and top up, and book repairs and tech support — online and at our store in Dawei.</p>
+
+        <div class="notify">
+          <a class="btn btn--icon" href="https://m.me/61550840542961" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.2 7.1V22l3-1.7c1.2.3 2.5.5 3.8.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.3 5.7z"/></svg>
+            Message us on Facebook
+          </a>
+          <a class="btn btn--icon btn--glass" href="tel:+959254700800">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call us
+          </a>
+          <p class="notify__note">Questions about phones, top-ups or repairs? We're happy to help now.</p>
+        </div>
+
+        <div class="hero__meta">
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span class="mm">အမှတ် ၁၇, နိဗ္ဗာန်လမ်း, မြို့တွင်းရပ်, ထားဝယ်</span>
+          </div>
+          <a href="tel:+959254700800">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            09 254 700 800
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll" href="#services">Explore<span></span></a>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">What's coming</span>
+    <h2>Three ways we'll serve you</h2>
+    <p class="sub">Everything you already trust us for in-store, plus new digital services — soon available online.</p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+        </div>
+        <h3>Retail</h3>
+        <p class="mm">လက်လီ အရောင်းဆိုင်</p>
+        <ul>
+          <li>Latest smartphones &amp; tablets</li>
+          <li>Accessories, chargers &amp; audio</li>
+          <li>Home appliances</li>
+          <li>Installment plans (Rent-to-Own)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20M6 15h4"/></svg>
+        </div>
+        <h3>Digital services</h3>
+        <p class="mm">ဒစ်ဂျစ်တယ် ဝန်ဆောင်မှု</p>
+        <ul>
+          <li>Mobile top-up &amp; data packs</li>
+          <li>Bill payments</li>
+          <li>Mobile money cash-in / cash-out</li>
+          <li>SIM registration &amp; services</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+        </div>
+        <h3>Technology services</h3>
+        <p class="mm">နည်းပညာ ဝန်ဆောင်မှု</p>
+        <ul>
+          <li>Phone repair &amp; screen replacement</li>
+          <li>New phone setup &amp; data transfer</li>
+          <li>Software updates &amp; troubleshooting</li>
+          <li>Tech advice for home &amp; business</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap visit__grid">
+    <div class="photo">
+      <img src="assets/storefront.webp" alt="Nyi Nyi Mobile storefront, Dawei" loading="lazy">
+    </div>
+    <div>
+      <span class="eyebrow">We're open in the meantime</span>
+      <h2>Visit our store in Dawei</h2>
+      <p class="sub">The website is still being built, but our shop is open. Come in and talk to our team.</p>
+
+      <div class="info">
+        <div class="info__row">
+          <span class="info__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div>
+            <b>Address</b>
+            <p class="mm">အမှတ် ၁၇, နိဗ္ဗာန်လမ်း, မြို့တွင်းရပ်, ထားဝယ်မြို့</p>
+            <p>No. 17, Nibban Road, Myo Twin Quarter, Dawei</p>
+          </div>
+        </div>
+        <div class="info__row">
+          <span class="info__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div>
+            <b>Call us <span class="mm" style="font-weight:600;color:var(--muted)">· ဖုန်းဆက်ရန်</span></b>
+            <div class="phones">
+              <a href="tel:+959254700800">09 254 700 800</a>
+              <a href="tel:+959252222542">09 252 222 542</a>
+              <a href="tel:+9595045963">09 504 5963</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn--blue" href="https://www.google.com/maps/search/?api=1&query=Nibban+Road+Dawei+Myanmar" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61550840542961" target="_blank" rel="noopener">Follow on Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="foot-logo" src="assets/logo/logo-wordmark-white.png" alt="ညီညီမိုဘိုင်း" width="1200" height="453">
+    <span>© 2026 Nyi Nyi Mobile (Dawei) · <span class="mm">ညီညီမိုဘိုင်း (ထားဝယ်)</span></span>
+    <span>Retail · Digital · Technology · <a href="https://www.facebook.com/profile.php?id=61550840542961" target="_blank" rel="noopener">Facebook</a></span>
+  </div>
+</footer>
+
+<script>
+  // Light / dark mode: follow the device setting until the visitor chooses, then remember the choice.
+  (function () {
+    var root = document.documentElement, KEY = 'nnm-theme';
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+    var meta = document.querySelector('meta[name="theme-color"]');
+    function saved() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function active() { return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light'); }
+    function sync() {
+      var t = active();
+      root.setAttribute('data-active-theme', t);
+      if (meta) meta.setAttribute('content', t === 'dark' ? '#060b18' : '#0a1a5c');
+    }
+    var s = saved();
+    if (s === 'light' || s === 'dark') root.setAttribute('data-theme', s);
+    sync();
+    if (media.addEventListener) media.addEventListener('change', sync);
+    document.querySelector('.theme-toggle').addEventListener('click', function () {
+      var next = active() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      sync();
+    });
+  })();
+
+  // Burmese has no reliable word-break data in browsers, so only allow line breaks at spaces.
+  document.querySelectorAll('.mm').forEach(function (el) {
+    if (el.children.length) return;
+    el.innerHTML = el.textContent.trim().split(/\s+/).map(function (w) {
+      return '<span style="white-space:nowrap">' + w + '</span>';
+    }).join(' ');
+  });
+</script>
+</body>
+</html>

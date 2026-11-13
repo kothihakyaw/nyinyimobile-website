@@ -45,7 +45,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 }
 
 .brand {
-  padding: 10px 16px 28px;
+  padding: 18px 16px 36px;
   border-radius: 26px 26px 0 0;
   background: linear-gradient(115deg, var(--navy), var(--blue));
   color: #fff;
@@ -83,6 +83,27 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .brand-name {
   padding-left: clamp(10px, 3vw, 18px);
   border-left: 1px solid #ffffff66;
+}
+
+.brand-branch {
+  display: block;
+  margin-top: 6px;
+  color: #a7f5b5;
+  font-size: clamp(14px, 3.7vw, 18px);
+  font-weight: 700;
+}
+
+.thai-flag {
+  display: inline-block;
+  width: 1.4em;
+  aspect-ratio: 3 / 2;
+  margin-inline-start: 0.15em;
+  vertical-align: -0.1em;
+  border-radius: 2px;
+  background: linear-gradient(
+    #a51931 0 16.667%, #fff 16.667% 33.333%, #2d2a4a 33.333% 66.667%,
+    #fff 66.667% 83.333%, #a51931 83.333% 100%
+  );
 }
 
 .panel {
@@ -232,7 +253,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 
 @media (max-width: 599px) and (max-height: 680px) {
   body { padding-block: 0; }
-  .brand { padding-block: 6px 22px; }
+  .brand { padding-block: 14px 34px; }
   .brand-link img { width: clamp(96px, 28vw, 144px); }
   .panel { padding-block: 5px; }
   .identity h1 { font-size: 36px; }
@@ -243,6 +264,8 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 }
 
 @media (max-width: 599px) and (max-height: 600px) {
+  .brand { padding-block: 10px 29px; }
+  .brand-branch { margin-top: 4px; }
   .qr span { display: none; }
 }
 
